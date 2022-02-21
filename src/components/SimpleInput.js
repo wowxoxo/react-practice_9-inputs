@@ -1,4 +1,5 @@
 import useInput from "../hooks/use-input";
+import useInputWithReducer from "../hooks/use-input-with-reducer";
 
 const SimpleInput = (props) => {
   const {
@@ -8,7 +9,7 @@ const SimpleInput = (props) => {
     valueChangeHandler: nameChangeHandler,
     inputBlurHandler: nameInputBlurHandler,
     reset: resetNameInput
-  } = useInput((value) => value.trim() !== "");
+  } = useInputWithReducer((value) => value.trim() !== "");
 
   let formIsValid = false;
 
